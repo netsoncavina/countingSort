@@ -12,21 +12,21 @@ function countingSort(array) {
   let result = [];
 
   //   Metodo lento para numeros grandes
-  //   for (let i = 0; i < counts.length; i++) {
-  //     for (let j = 0; j < counts[i]; j++) {
-  //       result.push(i);
-  //     }
-  //   }
-
-  //   Metodo rapido para numeros grandes
-  for (key of Object.keys(counts)) {
-    for (let j = 0; j < counts[key]; j++) {
-      result.push(Number(key));
+  for (let i = 0; i < counts.length; i++) {
+    for (let j = 0; j < counts[i]; j++) {
+      result.push(i);
     }
   }
+
+  //   Metodo rapido para numeros grandes
+  // for (key of Object.keys(counts)) {
+  //   for (let j = 0; j < counts[key]; j++) {
+  //     result.push(Number(key));
+  //   }
+  // }
 
   return result;
 }
 
-let array = [1, 4, 1, 2, 7, 5, 2];
+let array = [1, 4, 1, 2, 99999999];
 console.log(countingSort(array));
