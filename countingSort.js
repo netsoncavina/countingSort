@@ -8,6 +8,8 @@ function countingSort(array) {
       counts[n] = 1;
     }
   }
+  console.log("Array counts : ");
+  console.log(counts);
 
   let result = [];
 
@@ -28,5 +30,5 @@ function countingSort(array) {
   return result;
 }
 
-let array = [1, 4, 1, 2, 99999999];
+let array = [1, 4, 1, 2, 7, 5, 2];
 console.log(countingSort(array));
